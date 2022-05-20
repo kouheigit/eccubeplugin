@@ -253,6 +253,8 @@ return [
     'sitemap_page_xml' => [[], ['_controller' => 'Eccube\\Controller\\SitemapController::page'], [], [['text', '/sitemap_page.xml']], [], ['https', 'http']],
     'homepage' => [[], ['_controller' => 'Eccube\\Controller\\TopController::index'], [], [['text', '/']], [], ['https', 'http']],
     'user_data' => [['route'], ['_controller' => 'Eccube\\Controller\\UserDataController::index'], ['route' => '([0-9a-zA-Z_\\-]+\\/?)+(?<!\\/)'], [['variable', '/', '(?:[0-9a-zA-Z_\\-]+\\/?)+(?<!\\/)', 'route'], ['text', '/user_data']], [], ['https', 'http']],
+    'customize_testdb_testmethod' => [[], ['_controller' => 'Customize\\Controller\\testdbController::testMethod'], [], [['text', '/sample']], [], ['https', 'http']],
     'admin_logout' => [[], [], [], [['text', '/admin/logout']], [], ['https', 'http']],
     'logout' => [[], [], [], [['text', '/logout']], [], ['https', 'http']],
+    'age_limit_admin_config' => [[], ['_controller' => 'Plugin\\AgeLimit\\Controller\\Admin\\ConfigController::index'], [], [['text', '/admin/age_limit/config']], [], ['https', 'http']],
 ];

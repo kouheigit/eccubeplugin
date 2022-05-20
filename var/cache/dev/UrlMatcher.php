@@ -167,8 +167,10 @@ return [
         '/sitemap_category.xml' => [[['_route' => 'sitemap_category_xml', '_controller' => 'Eccube\\Controller\\SitemapController::category'], null, ['GET' => 0], ['https' => 0, 'http' => 1], false, false, null]],
         '/sitemap_page.xml' => [[['_route' => 'sitemap_page_xml', '_controller' => 'Eccube\\Controller\\SitemapController::page'], null, ['GET' => 0], ['https' => 0, 'http' => 1], false, false, null]],
         '/' => [[['_route' => 'homepage', '_controller' => 'Eccube\\Controller\\TopController::index'], null, ['GET' => 0], ['https' => 0, 'http' => 1], false, false, null]],
+        '/sample' => [[['_route' => 'customize_testdb_testmethod', '_controller' => 'Customize\\Controller\\testdbController::testMethod'], null, ['GET' => 0], ['https' => 0, 'http' => 1], false, false, null]],
         '/admin/logout' => [[['_route' => 'admin_logout'], null, null, ['https' => 0, 'http' => 1], false, false, null]],
         '/logout' => [[['_route' => 'logout'], null, null, ['https' => 0, 'http' => 1], false, false, null]],
+        '/admin/age_limit/config' => [[['_route' => 'age_limit_admin_config', '_controller' => 'Plugin\\AgeLimit\\Controller\\Admin\\ConfigController::index'], null, null, ['https' => 0, 'http' => 1], false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

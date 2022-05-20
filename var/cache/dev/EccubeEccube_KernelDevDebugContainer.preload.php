@@ -10,7 +10,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).'/vendor/autoload.php';
-require __DIR__.'/ContainerUfVxvLo/EccubeEccube_KernelDevDebugContainer.php';
+require __DIR__.'/ContainerFPbc9Cb/EccubeEccube_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -34,6 +34,7 @@ $classes[] = 'Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser';
 $classes[] = 'Symfony\Bundle\FrameworkBundle\EventListener\ResolveControllerNameSubscriber';
 $classes[] = 'Symfony\Component\HttpFoundation\RequestMatcher';
 $classes[] = 'Symfony\Component\DependencyInjection\ServiceLocator';
+$classes[] = 'Customize\Controller\testdbController';
 $classes[] = 'Eccube\Command\ComposerInstallCommand';
 $classes[] = 'Eccube\Command\ComposerRemoveCommand';
 $classes[] = 'Eccube\Command\ComposerRequireAlreadyInstalledPluginsCommand';
@@ -353,6 +354,9 @@ $classes[] = 'Eccube\Twig\Extension\TaxExtension';
 $classes[] = 'Eccube\Util\CacheUtil';
 $classes[] = 'Monolog\Processor\IntrospectionProcessor';
 $classes[] = 'Monolog\Processor\UidProcessor';
+$classes[] = 'Plugin\AgeLimit\Controller\Admin\ConfigController';
+$classes[] = 'Plugin\AgeLimit\Form\Type\Admin\ConfigType';
+$classes[] = 'Plugin\AgeLimit\Repository\ConfigRepository';
 $classes[] = 'SunCat\MobileDetectBundle\DeviceDetector\MobileDetector';
 $classes[] = 'Symfony\Bridge\Monolog\Processor\WebProcessor';
 $classes[] = 'Symfony\Bundle\FrameworkBundle\Controller\RedirectController';

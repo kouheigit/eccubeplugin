@@ -1,0 +1,24 @@
+<?php
+
+namespace Customize\Controller;
+
+use Eccube\Controller\AbstractController;
+use Eccube\Entity\Product;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Response;
+
+class testdbController extends AbstractController
+{
+    /**
+     * @Method("GET")
+     * @Route("/sample")
+     */
+    public function testMethod()
+    {
+        /** @var Product $product */
+	$product = $this->entityManager->getRepository('Eccube\Entity\product')->find(1);
+	return new Response($product->getDescriptionDetail());
+
+    }
+}
